@@ -1,2 +1,2 @@
 # quote-generator
- A fully responsive website for generating quotes built using HTML5, CSS3 and JavaScript.
+ A fully responsive website for generating quotes built using HTML5, CSS3 and JavaScript, also allowing you to share quotes on Twitter/X.
