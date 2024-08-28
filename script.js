@@ -46,24 +46,28 @@ function newQuote(){
             complete();
 }
 
-async function getQuotes(){
+// async function getQuotes(){
+//     loading();
+//     const apiUrl='https://type.fit/api/quotes'; //const used as val is nvr changed
+//     try{
+//         console.log("Before fetch"); // Log before making the fetch request
+//         const response =await fetch (apiUrl);
+//         console.log("After fetch");
+//         apiQuotes = await response.json();
+//        // console.log(apiQuotes[12]);
+
+//     newQuote();
+
+//     } catch(error){
+//         //handle_error
+//         alert(error)
+//     }
+// }
+function initializeQuotes() {
     loading();
-    const apiUrl='https://type.fit/api/quotes'; //const used as val is nvr changed
-    try{
-        console.log("Before fetch"); // Log before making the fetch request
-        const response =await fetch (apiUrl);
-        console.log("After fetch");
-        apiQuotes = await response.json();
-       // console.log(apiQuotes[12]);
-
+    apiQuotes = localQuotes[0]; // Set apiQuotes to the array of quotes
     newQuote();
-
-    } catch(error){
-        //handle_error
-        alert(error)
-    }
 }
-
 
 //tweet
 function tweetQuote(){
@@ -85,4 +89,5 @@ twitterBtn.addEventListener('click',tweetQuote);
 
 
 //On load
-getQuotes();
+initializeQuotes();
+// getQuotes();
